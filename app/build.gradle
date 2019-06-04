@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.dambroz.dionis"
+        minSdkVersion 16
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    android {
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    // Android support
+    implementation support.appcompat7
+    implementation support.recyclerview
+    implementation support.cardview
+    implementation materialDesign.design
+    implementation support.constraintLayout
+
+    // ButterKnife
+    implementation jakewharton.butterknife
+    annotationProcessor jakewharton.butterknifeCompiler
+
+    // Retrofit
+    implementation retrofit2.retrofit
+    implementation retrofit2.retrofitConverterGson
+    implementation retrofit2.retrofitConverterXml
+
+    implementation gson.gson
+
+    implementation picasso3.picasso
+
+    //moxy
+//    implementation arello.moxy
+    implementation schoolhelper.moxy
+    implementation schoolhelper.moxyAndroidX
+    implementation schoolhelper.moxyMaterial
+    annotationProcessor schoolhelper.moxyCompiler
+    //dagger
+    implementation dagger2.dagger
+    implementation dagger2.daggerSupport
+    annotationProcessor dagger2.daggerCompiler
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
