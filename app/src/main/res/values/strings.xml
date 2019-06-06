@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Dionis</string>
+    <integer name="com_vk_sdk_AppId">7009250</integer>
 </resources>

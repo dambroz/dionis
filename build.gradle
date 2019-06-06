@@ -32,7 +32,8 @@ ext.versions = [
         picasso         : "2.71828",
         moxy            : "1.7.0",
         dagger          : "2.23.1",
-        arello          : "1.5.6"
+        arello          : "1.5.6",
+        vk              : "2.1.0"
 ]
 
 ext.support = [
@@ -66,7 +67,7 @@ ext.picasso3 = [
 ]
 
 ext.schoolhelper = [
-        moxy: "tech.schoolhelper:moxy-x:$versions.moxy",
+        moxy        : "tech.schoolhelper:moxy-x:$versions.moxy",
         moxyAndroidX: "tech.schoolhelper:moxy-x-androidx:$versions.moxy",
         moxyMaterial: "tech.schoolhelper:moxy-x-material:$versions.moxy",
         moxyCompiler: "tech.schoolhelper:moxy-x-compiler:$versions.moxy"
@@ -81,6 +82,10 @@ ext.dagger2 = [
 ext.arello = [
         moxy        : "com.arello-mobile:moxy:$versions.arello",
         moxyCompiler: "com.arello-mobile:moxy-compiler:$versions.arello"
+]
+
+ext.mailru = [
+        vk: "com.vk:androidsdk:$versions.vk"
 ]
 
 task clean(type: Delete) {

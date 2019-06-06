@@ -21,7 +21,7 @@ public class RetrofitModule {
     @Provides
     @ApplicationScope
     Retrofit provideRetrofit(OkHttpClient okHttpClient) {
-        return new Retrofit.Builder().baseUrl("").client(okHttpClient).build();
+        return new Retrofit.Builder().baseUrl("http:/vk.com").client(okHttpClient).build();
     }
 
     @Provides
